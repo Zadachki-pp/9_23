@@ -5,6 +5,7 @@
 
 unsigned _get_number_first_digit(unsigned number);
 unsigned _get_number_digits_count(unsigned number);
+unsigned _check_all_number_digits_even(unsigned number);
 
 
 namespace node {
@@ -29,7 +30,7 @@ namespace node {
             int& data = current->data;
             if (
                 (100 <= data && data <= 999)  // Трёхзначное
-                && (data % 2 == 0)  // Состоит только из четных цифр
+                && _check_all_number_digits_even(data)  // Состоит только из четных цифр
             ) {
                 is_contains = true;
             }
@@ -105,3 +106,17 @@ unsigned _get_number_digits_count(unsigned number) {
     return count;
 }
 
+
+unsigned _check_all_number_digits_even(unsigned number) {
+    bool result = true;
+
+    while(number != 0) {
+        auto digit = number % 10;
+        if (digit % 2 != 0) {
+            result = false;
+        }
+
+        number /= 10;
+    }
+    return result;
+}
