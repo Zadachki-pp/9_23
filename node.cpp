@@ -106,4 +106,13 @@ namespace node {
             }
         }
     }
+
+    void free(Node* root) {
+        Node* current = root->next;
+        while (!(current->is_fictitious)) {
+            Node* next = current->next;
+            delete current;
+            current = next;
+        }
+    }
 }
