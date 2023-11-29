@@ -107,7 +107,7 @@ namespace node {
         }
     }
 
-    void free(Node* root) {
+    void clear(Node* root) {
         Node* current = root->next;
         while (!(current->is_fictitious)) {
             Node* next = current->next;

@@ -12,7 +12,7 @@ int main() {
         node::duplicate_numbers_with_odd_digits_count(root);
     }
     node::print(root);
-    node::free(root);
+    node::clear(root);
 
     return 0;
 }

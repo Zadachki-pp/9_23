@@ -15,5 +15,5 @@ namespace node {
     void duplicate_by_value(Node *root, int value);
     unsigned len(Node *root);
     void sort(Node *root);
-    void free(Node* root);
+    void clear(Node* root);
 }
