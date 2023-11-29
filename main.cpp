@@ -14,5 +14,7 @@ int main() {
     node::print(root);
     node::clear(root);
 
+    delete root;
+
     return 0;
 }
