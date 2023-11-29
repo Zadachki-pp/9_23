@@ -55,6 +55,7 @@ namespace node {
                     next->data = current->data;
                     current->data = tmp;
                 }
+
                 current = next;
                 next = next->next;
             }
